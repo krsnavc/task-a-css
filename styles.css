@@ -1,0 +1,34 @@
+body {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.circle {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  border: 2px solid black;
+  position: relative;
+}
+
+.box {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  transform-origin: center;
+  animation: rotateAroundCircle 5s linear infinite;
+}
+
+@keyframes rotateAroundCircle {
+  0% {
+    transform: rotate(0deg) translate(-250px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(-250px) rotate(-360deg);
+  }
+}
